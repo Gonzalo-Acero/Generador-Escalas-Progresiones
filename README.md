@@ -2,10 +2,13 @@
 # Generador de Escalas y Progresiones Musicales.
 
 ##  🎵 Descripcion del proyecto
-¿Sabías que la estructura de una escala mayor se basa en un patrón de intervalos? Hoy inicié un proyecto en Python para automatizar este proceso y explorar la teoría musical desde una perspectiva programática.
-Como estudiante de Sistemas y Programación, busqué la excusa para lograr aprender a desarrollar en Python combinandolo con otra de mis pasiones, la música.
-Para empezar, voy a programar este proyecto en un nivel sencillo, por ende, no va a tener interfaz visual (en un principio, para no abrumarme 😅). El primer objetivo es que el programa genere escalas de notas músicales y acordes mayores y menores de tres notas.
-Todas las imagenes descriptivas del proyecto se encuentran en este repositorio.
+*¿Sabías que la estructura de una escala mayor se basa en un patrón de intervalos?* Por eso fue que inicié este proyecto en `Python` para automatizar este proceso y explorar la `teoría musical` desde una perspectiva *programática.* <br>
+Como estudiante de `Sistemas` y `Programación`, busqué la excusa para lograr aprender a desarrollar en `Python` combinandolo con otra de mis pasiones, *la música.* <br>
+**Para empezar**, voy a programar este proyecto en un **nivel sencillo**, por ende, no va a tener `interfaz visual` *(en un principio, para no abrumarme 😅)*.<br>
+El **primer objetivo** es que el programa genere `escalas` de notas músicales y `acordes` mayores y menores de tres notas.<br>
+
+
+*Todas las imagenes descriptivas del proyecto se encuentran en este repositorio.*
 
 ## 🔧 Teconologias usadas
 
