@@ -27,8 +27,8 @@ SCALES_PATTERNS = {
 
 CHORD_FORMULAS = {
     "mayor": [0, 4, 7],             # Intervalos para acorde mayor: raíz, 3ª mayor, 5ª justa
-    "menor": [0, 3, 7],             
-    "disminuido": [0, 3, 6]
+    "menor": [0, 3, 7],             # Intervalos para acorde menor: raíz, 3ª menor, 5ª justa   
+    "disminuido": [0, 3, 6],         # Intervalos para acorde disminuido: raíz, 3ª menor, 5ª disminuida
 }
 
 # Cada numero representa la "posicion" de la nota en la escala, la nota 0 es la nota raíz del acorde.
@@ -37,10 +37,10 @@ CHORD_FORMULAS = {
 # Progresiones de acordes tipicas o mas comunes.
 
 COMMON_PROGRESSIONS = {
-    "I-IV-V-I": [1, 4, 5, 1],
-    "ii-V-I": [2, 5, 1],
-    "I-V-vi-IV": [1, 5, 6, 4],
-}
+    "I-IV-V-I": [1, 4, 5, 1],       # Progresión típica de música clásica y pop
+    "ii-V-I": [2, 5, 1],            # Progresión típica de jazz
+    "I-V-vi-IV": [1, 5, 6, 4],      # Progresión usada en muchos éxitos pop
+}  
 
 # Los numeros romanos representan el "grado" de la escala, o sea, la posicion de la primer nota del acorde, Por EJ: en la primer progresion vemos que 
 # empieza con el acorde "I", o sea, que la nota "tonica" es la nota raiz de la escala, pero en el segundo ("IV") la nota "tónica"

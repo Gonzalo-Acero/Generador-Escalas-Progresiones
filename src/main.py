@@ -1,5 +1,6 @@
 from scales import generate_scale
 from chords import generate_chord_progression
+from utils.music_theory import COMMON_PROGRESSIONS
 
 
 # Programa principal para generar escalas musicales
@@ -22,20 +23,24 @@ def main():
         print(f"Error: {e}") # Maneja errores en la entrada del usuario
         
 
-    # Preguntar al usuario si quiere que se genere una progresion de acordes
-
-    option = input("¿Desea generar una progresion de acordes? (si/no): ").lower()
+    # Opción para generar progresión de acordes
+    option = input("¿Desea generar una progresión de acordes? (si/no): ").lower()
     if option == "si":
-        print("Progresiones disponibles: I-IV-V-I, ii-V-I, I-V-vi-IV")
-        progression_name = input("Ingrese el nombre de la progresion deseada: ")
+        print("Progresiones disponibles:")
+        for i, progression_name in enumerate(COMMON_PROGRESSIONS.keys(), start=1):
+            print(f"{i}. {progression_name}")  # Muestra opciones numeradas
+
         try:
+            # Permite al usuario seleccionar una progresión usando un número
+            choice = int(input("Seleccione el número de la progresión deseada: ")) - 1
+            progression_name = list(COMMON_PROGRESSIONS.keys())[choice]
             chords = generate_chord_progression(scale, progression_name)
-            print("Progresion generada:")
+
+            print("Progresión generada:")
             for chord_name, chord_notes in chords:
-                print(f"{chord_name}: {', '.join(chord_notes)}")
-        except ValueError as e:
-            print(f"Error: {e}")
-            return
+                print(f"{chord_name}: {', '.join(chord_notes)}")  # Muestra cada acorde
+        except (ValueError, IndexError):
+            print("Error: Selección inválida.")  # Maneja errores de entrada inválida
             
        
 if __name__ == "__main__":
