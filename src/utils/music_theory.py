@@ -21,3 +21,27 @@ SCALES_PATTERNS = {
 # o sea, caeriamos en "RE" (o "D"). NO TE OLVIDES, que al  igual que el piano, tambien se cuentan las teclas negras
 # o sostenidos (#) y bemoles (b), por ahora, solo vamos a estar usando SOSTENIDOS
 # Estos saltos, son llamados semitonos, y estas en lo correcto, dos semitonos conforman un tono.
+
+
+# Formulas para construir acordes basicos (de 3 notas o "triadas")
+
+CHORD_FORMULAS = {
+    "mayor": [0, 4, 7],             # Intervalos para acorde mayor: raíz, 3ª mayor, 5ª justa
+    "menor": [0, 3, 7],             
+    "disminuido": [0, 3, 6]
+}
+
+# Cada numero representa la "posicion" de la nota en la escala, la nota 0 es la nota raíz del acorde.
+
+
+# Progresiones de acordes tipicas o mas comunes.
+
+COMMON_PROGRESSIONS = {
+    "I-IV-V-I": [1, 4, 5, 1],
+    "ii-V-I": [2, 5, 1],
+    "I-V-vi-IV": [1, 5, 6, 4],
+}
+
+# Los numeros romanos representan el "grado" de la escala, o sea, la posicion de la primer nota del acorde, Por EJ: en la primer progresion vemos que 
+# empieza con el acorde "I", o sea, que la nota "tonica" es la nota raiz de la escala, pero en el segundo ("IV") la nota "tónica"
+# es la cuarta nota de esta misma. Y sí, como te imaginas, depende si el numero romano esta en mayuscula o minuscula, es si el acorde es mayor o menor respectivamente.
