@@ -1,4 +1,4 @@
-![Imagen del Proyecto](https://github.com/Gonzalo-Acero/APIRest-PluginsMusicales/blob/main/img/Api%20Musica/IMG_proyecto.png)
+![Imagen del Proyecto](https://github.com/Gonzalo-Acero/Generador-Escalas-Progresiones/blob/main/docs/images/diagram-scale.png)
 # Generador de Escalas y Progresiones Musicales.
 
 ##  🎵 Descripcion del proyecto
