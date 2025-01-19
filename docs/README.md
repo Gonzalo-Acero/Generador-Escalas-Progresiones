@@ -19,7 +19,8 @@ SCALES_PATTERNS = {
 Estos son los "patrones", que siguen las escalas.
 Para que se entienda, imagina un piano, si la escala empieza en X nota, el número representa cuantas
 teclas se omite hasta la siguiente nota pertenenciente a la escala.
-Por EJ: si empezamos en "DO" (o "C"), para cualquiera de las dos escalas se "saltarian" dos notas o sea, caeriamos en "RE" (o "D").
+Por EJ: si empezamos en "DO" (o "C"), para cualquiera de las dos escalas se "saltarian" dos notas o sea,
+caeriamos en "RE" (o "D").
 NO TE OLVIDES, que al  igual que el piano, tambien se cuentan las teclas negras
 o sostenidos (#) y bemoles (b), por ahora, solo vamos a estar usando SOSTENIDOS.
 Estos saltos, son llamados semitonos, y estas en lo correcto, dos semitonos conforman un tono.
