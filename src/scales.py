@@ -3,27 +3,20 @@ from utils.music_theory import NOTES, SCALES_PATTERNS
 
 # Genera una escala musical a partir de la nota "raíz" y el tipo de escala
 
-def generate_scale(root_note, scale_type):
-    # Valida que la nota raíz sea válida
-    if root_note not in NOTES:
-        raise ValueError(f"{root_note} is not valid note.")
+def generate_scale(root, scale_type):
+   
+   root = root.upper()  # Asegurarnos de manejar mayúsculas/minúsculas
+   if root not in NOTES:
+        raise ValueError(f"{root} no es una nota válida. Usa notas como C, D#, etc.")
     
-    # Valida que el tipo de escala sea soportado y mormaliza el tipo de escala a minúsculas para validar correctamente
-    scale_type = scale_type.lower()
-    if scale_type not in SCALES_PATTERNS:
-        raise ValueError(f"{scale_type} is not a supported scale type.")
+      
+   formula = SCALES_PATTERNS.get(scale_type)
+   if not formula:
+        raise ValueError(f"{scale_type} no es un tipo de escala válido.")
     
-    
-    # Obtiene el patrón de intervalos para el tipo de escala
-    pattern = SCALES_PATTERNS[scale_type]
-    scale = []
-    start_index = NOTES.index(root_note)
+   root_index = NOTES.index(root)
+   scale = [NOTES[(root_index + interval) % len(NOTES)] for interval in formula]
     
     
-    # Construye la escala siguiendo el patrón de intervalos
-    for step in pattern:
-        scale.append(NOTES[start_index])
-        start_index = (start_index + step) % len(NOTES) # Asegura que sea cíclico
-        
-        
-    return scale
+   return scale
+   

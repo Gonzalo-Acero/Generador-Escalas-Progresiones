@@ -1,6 +1,7 @@
 from scales import generate_scale
 from chords import generate_chord_progression
 from utils.music_theory import COMMON_PROGRESSIONS
+from utils.file_handler import save_progression_to_file
 
 
 # Programa principal para generar escalas musicales
@@ -42,6 +43,17 @@ def main():
         except (ValueError, IndexError):
             print("Error: Selección inválida.")  # Maneja errores de entrada inválida
             
+
+    # Preguntar al usuario si desea guardar la progresión
+    save_option = input("¿Desea guardar esta progresión en un archivo? (si/no): ").strip().lower()
+    if save_option == "si":
+        file_name = input("Ingrese el nombre del archivo (con extensión .txt): ").strip()
+        scale_info = f"Escala {scale_type.capitalize()} de {root_note}"
+        save_progression_to_file(file_name, scale_info, progression_name, chords)
+
+
+
+
        
 if __name__ == "__main__":
     main()
