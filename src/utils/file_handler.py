@@ -1,4 +1,5 @@
 import os
+import re # Para validar el nombre de los archivos a guardar o exportar
 
 
 # Guarda una progresion de acordes en un archivo de texto
@@ -9,6 +10,15 @@ def save_progression_to_file(file_name, scale_info, progression_name, chords):
     folder_name = "Progresiones Guardadas"
     
     try:
+        
+        # Valida y ajusta el nombre del archivo
+        
+        if not file_name.endswith(".txt"):
+            file_name += ".txt" # Agrega extension .txt si no esta incluida por el usuario
+            
+        # Remueve caracteres no permitidos en nombres de archivos
+        file_name = re.sub(r'[<>:"/\\|?*]', '', file_name)
+        
         # Crea la carpeta si no existe
         os.makedirs(folder_name, exist_ok=True)
         

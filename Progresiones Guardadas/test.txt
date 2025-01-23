@@ -1,0 +1,7 @@
+Escala Mayor de C
+Progresión: I-IV-V-I
+Acordes:
+C mayor: C, E, G
+F mayor: F, A, C
+G mayor: G, B, D
+C mayor: C, E, G
