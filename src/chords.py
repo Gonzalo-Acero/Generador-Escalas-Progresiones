@@ -1,4 +1,5 @@
 from utils.music_theory import CHORD_FORMULAS, COMMON_PROGRESSIONS, NOTES
+from colorama import Fore, Style
 
 
 # Genera un acorde a partir de la nota raiz o tonica y la formula.
@@ -6,7 +7,7 @@ from utils.music_theory import CHORD_FORMULAS, COMMON_PROGRESSIONS, NOTES
 def generate_chord(scale, root_note, chord_type):
     formula = CHORD_FORMULAS.get(chord_type)
     if not formula:
-        raise ValueError(f"{chord_type} is not a supported chord type.")
+        raise ValueError(f"{Fore.RED}{chord_type} is not a supported chord type." + Style.RESET_ALL)
 
     root_index = NOTES.index(root_note) # Usar siempre el índice en NOTES
     chord = []
@@ -18,8 +19,7 @@ def generate_chord(scale, root_note, chord_type):
 def generate_chord_progression(scale, progression_name):
     progression_pattern = COMMON_PROGRESSIONS.get(progression_name)
     if not progression_pattern:
-        raise ValueError(f"{progression_name} is not a supported progression.")
-
+        raise ValueError(f"{Fore.RED}{progression_name} is not a supported progression." + Style.RESET_ALL)
     chords = []
     for degree in progression_pattern:
         # Corrección CRUCIAL: determinar el tipo de acorde correctamente
@@ -30,7 +30,7 @@ def generate_chord_progression(scale, progression_name):
         elif degree == 7:
             chord_type = "disminuido"
         else:
-            raise ValueError(f"Grado {degree} no válido.")
+            raise ValueError(f"{Fore.RED} Grado {degree} no válido." + Style.RESET_ALL)
 
         root_note = scale[degree - 1]
         chord_notes = generate_chord(scale, root_note, chord_type)

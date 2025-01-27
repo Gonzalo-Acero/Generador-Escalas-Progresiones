@@ -1,4 +1,4 @@
-Escala Mayor de C
+[32mEscala Mayor de C[0m
 Progresión: I-IV-V-I
 Acordes:
 C mayor: C, E, G
