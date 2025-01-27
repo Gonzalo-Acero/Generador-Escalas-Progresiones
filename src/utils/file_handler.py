@@ -1,6 +1,6 @@
 import os
 import re # Para validar el nombre de los archivos a guardar o exportar
-
+from colorama import Fore, Style
 
 # Guarda una progresion de acordes en un archivo de texto
 
@@ -33,6 +33,6 @@ def save_progression_to_file(file_name, scale_info, progression_name, chords):
             for chord_name, chord_notes in chords:
                 file.write(f"{chord_name}: {', '.join(chord_notes)}\n")
         
-        print(f"Progresión guardada en '{full_path}' con éxito.")
+        print(f"{Fore.GREEN}Progresión guardada exitosamente en: {full_path}{Style.RESET_ALL}")
     except Exception as e:
-        print(f"Error al guardar la progresión: {e}")
+        print(f"{Fore.RED}Error al guardar la progresión: {e}{Style.RESET_ALL}")
