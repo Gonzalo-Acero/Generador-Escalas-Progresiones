@@ -1,0 +1,6 @@
+[32mEscala Mayor de C[0m
+Progresión: ii-V-I
+Acordes:
+D menor: D, F, A
+G mayor: G, B, D
+C mayor: C, E, G
